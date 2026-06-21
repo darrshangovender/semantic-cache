@@ -1,0 +1,20 @@
+[project]
+name = "semantic-cache"
+version = "0.1.0"
+description = "Production semantic cache for LLM responses — Postgres + pgvector, exact-hash + near-match lookup."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Darrshan Govender", email = "darrshangovender@gmail.com" }]
+keywords = ["llm", "cache", "rag", "pgvector", "embeddings"]
+dependencies = [
+    "psycopg[binary]>=3.2",
+    "openai>=1.50.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.4"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
