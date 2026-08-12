@@ -2,7 +2,8 @@
 
 # semantic-cache — production cache for LLM responses, keyed by meaning
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
+[![tests](https://github.com/darrshangovender/semantic-cache/actions/workflows/tests.yml/badge.svg)](https://github.com/darrshangovender/semantic-cache/actions/workflows/tests.yml)(LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://python.org)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-4169E1?logo=postgresql&logoColor=white)](https://postgresql.org)
 [![pgvector](https://img.shields.io/badge/pgvector-0.7+-4169E1)](https://github.com/pgvector/pgvector)
