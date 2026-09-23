@@ -13,8 +13,28 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8.0", "ruff>=0.4"]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=4.1",
+    "ruff>=0.6",
+]
+
+[project.urls]
+Homepage = "https://github.com/darrshangovender/semantic-cache"
+Issues = "https://github.com/darrshangovender/semantic-cache/issues"
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["semantic_cache"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -q"
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
