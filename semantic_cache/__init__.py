@@ -4,4 +4,4 @@ from .cache import SemanticCache
 from .embeddings import Embedder, OpenAIEmbedder
 
 __version__ = "0.1.0"
-__all__ = ["SemanticCache", "Embedder", "OpenAIEmbedder"]
+__all__ = ["Embedder", "OpenAIEmbedder", "SemanticCache"]
