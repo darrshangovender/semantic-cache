@@ -11,11 +11,10 @@ from __future__ import annotations
 
 import functools
 import hashlib
-from datetime import datetime, timedelta, timezone
-from typing import Callable
+from collections.abc import Callable
+from datetime import UTC, datetime, timedelta
 
 import psycopg
-from psycopg.types.json import Json
 
 from .embeddings import Embedder, OpenAIEmbedder
 
@@ -57,7 +56,7 @@ class SemanticCache:
         Does NOT call the LLM. The decorator does that on miss.
         """
         prompt_hash = _hash(prompt)
-        cutoff = (datetime.now(timezone.utc) - self.ttl).isoformat()
+        cutoff = (datetime.now(UTC) - self.ttl).isoformat()
 
         with psycopg.connect(self.dsn) as conn:
             # Exact match first — sub-ms.
